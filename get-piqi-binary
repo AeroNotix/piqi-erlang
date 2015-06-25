@@ -20,7 +20,6 @@ then
 		cp -a "$PIQI" $dst
 	fi
 else 
-then
 	src="$REBAR_DEPS_DIR/piqi_binary/"
 	dst=priv/piqi-binary
 	if [ ! -d $dst ] || [ -d "$src" -a "$src" -nt $dst ]
