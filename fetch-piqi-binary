@@ -2,12 +2,14 @@
 
 set -e
 
+PIQIVSN="$1"
+
 # do nothing if $PIQI set
 if [ ! -n "$PIQI" ] && [ -n "$PIQIVSN" ]
 then
-    mkdir -p deps
+    mkdir -p priv
     (
-        cd deps ;
+        cd priv ;
         wget -O - \
             https://github.com/alavrik/piqi-binary/archive/v${PIQIVSN}.tar.gz \
                 | tar zxvf -
