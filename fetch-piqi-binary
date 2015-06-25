@@ -9,6 +9,8 @@ PIQIVSN="$2"
 if [ ! -n "$PIQI" ] && [ -n "$PIQIVSN" ]
 then
     mkdir -p priv
+    if [ ! -d priv/piqi-binary ]
+    then
     (
         cd priv ;
         wget -q -O - \
@@ -16,4 +18,5 @@ then
                 | tar zxvf -
         mv "piqi-binary-${PIQIVSN}" piqi-binary
     )
+    fi
 fi
