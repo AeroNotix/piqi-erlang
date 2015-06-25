@@ -1,0 +1,16 @@
+#!/bin/sh
+
+set -e
+
+# do nothing if $PIQI set
+if [ ! -n "$PIQI" ]
+then
+    piqi_version=$1
+    mkdir -p priv
+    (
+        cd priv ;
+        wget -O - \
+            https://github.com/alavrik/piqi-binary/archive/${piqi_version}.tar.gz \
+                | tar zxvf -
+    )
+fi
