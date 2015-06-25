@@ -2,7 +2,8 @@
 
 set -e
 
-PIQIVSN="$1"
+PIQIBINREPO="$1"
+PIQIVSN="$2"
 
 # do nothing if $PIQI set
 if [ ! -n "$PIQI" ] && [ -n "$PIQIVSN" ]
@@ -11,7 +12,7 @@ then
     (
         cd priv ;
         wget -q -O - \
-            https://github.com/alavrik/piqi-binary/archive/v${PIQIVSN}.tar.gz \
+            https://github.com/${PIQIBINREPO}/archive/v${PIQIVSN}.tar.gz \
                 | tar zxvf -
         mv "piqi-binary-${PIQIVSN}" piqi-binary
     )
