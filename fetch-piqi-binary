@@ -3,14 +3,14 @@
 set -e
 
 # do nothing if $PIQI set
-if [ ! -n "$PIQI" ]
+if [ ! -n "$PIQI" ] && [ -n "$PIQIVSN" ]
 then
-    piqi_version=$1
-    mkdir -p priv
+    mkdir -p deps
     (
-        cd priv ;
+        cd deps ;
         wget -O - \
-            https://github.com/alavrik/piqi-binary/archive/${piqi_version}.tar.gz \
+            https://github.com/alavrik/piqi-binary/archive/v${PIQIVSN}.tar.gz \
                 | tar zxvf -
+        mv "piqi-binary-v${PIQIVSN}" piqi-binary
     )
 fi
