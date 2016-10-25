@@ -22,7 +22,7 @@
 
 
 %% reference implementation for piqirun:encode_varint_value/1
--spec encode_varint_value/1 :: (
+-spec encode_varint_value(
     I :: non_neg_integer()) -> binary().
 
 encode_varint_value(I) ->
