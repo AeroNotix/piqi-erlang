@@ -3,7 +3,7 @@ export PIQI = $(shell echo ../priv/piqi-binary/"`uname -s`-`uname -m`"/piqi)
 endif
 
 #PIQIC = ../piqic-erlang/piqic-erlang
-PIQIC = ERL_FLAGS="-pa ../piqic-erlang/__build/default/lib/piqic_erlang/ebin" ../priv/bin/piqic-erlang
+PIQIC = ERL_FLAGS="-pa ../piqic-erlang/_build/default/lib/piqic_erlang/ebin" ../priv/bin/piqic-erlang
 PIQIC_FLAGS = #--trace
 
 
