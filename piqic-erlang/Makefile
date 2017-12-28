@@ -1,4 +1,4 @@
-REBAR ?= rebar
+REBAR ?= ../rebar3
 
 
 all:
@@ -7,4 +7,3 @@ all:
 
 clean:
 	$(REBAR) clean
-
