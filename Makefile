@@ -1,4 +1,4 @@
-REBAR ?= rebar
+REBAR ?= ./rebar3
 
 
 all:
@@ -28,4 +28,3 @@ distclean: clean
 
 
 .PHONY: deps
-
